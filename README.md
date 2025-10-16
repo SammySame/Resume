@@ -1,6 +1,4 @@
 # Resume
-
-## Table of contents
 - [GDScript](#gdscript)
   - [Galaxy Generator](#galaxy-generator)
 - [Javascript](#javascript)
