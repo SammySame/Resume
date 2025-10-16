@@ -1,0 +1,7 @@
+# Path: /etc/fail2ban/jail.local
+
+[gotify]
+enabled  = true
+port     = 80
+#ignore if systemd used
+logpath  = /var/log/gotify/gotify.log
