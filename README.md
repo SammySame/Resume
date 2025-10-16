@@ -73,7 +73,7 @@ and if an error is found, the notification receives the highest priority. All th
 are safely stored in an .env file, and the backup itself is encrypted.
 
 ### Compress Images with MozJPEG
-[Source code](bash/compress-images-mozjpeg.sh)
+[Source code](bash/compress-images-mozjpeg.sh) <br>
 Automates the task of compressing images in a directory.
 The user can pass arguments for source and output file extension.
 The progress of the script is echoed in the console.
