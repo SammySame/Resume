@@ -35,7 +35,7 @@ many dimension teleporting rules. It can even handle modded dimensions.
 ## Python
 ### My Blender Utils
 [Dedicated repo link](https://github.com/SammySame/my-blender-utils) <br>
-It is an add-on with a few automation scripts that can be run with just a click of a UI button. <br>
+It is an add-on with a few automation scripts that can be run with just a click of a UI button.
 For an extensive write-up, please check the repo in the link above.
 
 ### Blender Batch Render
