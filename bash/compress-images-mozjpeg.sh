@@ -4,6 +4,7 @@
 # Available command line arguments:
 # -s <source-file-extension> (defaults to JPG if not defined)
 # -t <output-file-extension> (defaults to jpg if not defined)
+# -q <number-between-0-100>  (defaults to 85 if not defined)
 #
 # The images are output into the relative "Compressed" directory.
 # The progress is tracked and echoed for every processed file.
@@ -13,9 +14,10 @@ source_ext="JPG"
 output_ext="jpg"
 output_dir="./Compressed"
 output_suffix="-compressed"
+quality=85
 
 # Get any passed arguments
-while getopts ":s:t:" opt; do
+while getopts ":s:t:q:" opt; do
 	case $opt in
 		s)
 			if [ -z "$OPTARG" ]; then
@@ -30,6 +32,19 @@ while getopts ":s:t:" opt; do
 				exit 1
 			fi
 			output_ext="$OPTARG"
+			;;
+		q)
+			if [ -z "$OPTARG" ]; then
+				echo "Option -q requires an argument" >&2
+				exit 1
+			fi
+			case "$OPTARG" in
+				''|*[!0-9]*)
+					echo "Option -q requres unsigned integer value" >&2
+					exit 1
+					;;
+			esac
+			quality="$OPTARG"
 			;;
 		\?)
 			echo "Invalid option -${OPTARG}" >&2
@@ -56,7 +71,7 @@ i=0
 for img in *.$source_ext; do
 	i=$((i+1))
 	echo "Processing ${img}... (${i}/${img_count})"
-	cjpeg -quality 80 "$img" \
+	cjpeg -quality "$quality" "$img" \
 		> "${output_dir}/${img%.${source_ext}}${output_suffix}.${output_ext}"
 done
 
