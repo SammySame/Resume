@@ -25,7 +25,7 @@ For an extensive write-up, please check the repo in the link above.
 [Example config](javascript/dimension-stacking-config.json) <br>
 Minecraft is a 3D sandbox game with a huge modding community.
 Thanks to the [KubeJS](https://www.curseforge.com/minecraft/mc-mods/kubejs) 
-I utilized JavaScript to make changes to various base game mechanics. <br>
+I utilized JavaScript to make changes to various base game mechanics.
 In this instance, I created a system for moving between in-game
 dimensions. Because the ability to teleport a player who is riding an entity
 is non-existent in the base game, I have created a completely custom solution.
