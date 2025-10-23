@@ -16,7 +16,7 @@
 ## GDScript
 ### Galaxy Generator
 [Dedicated repo link](https://github.com/SammySame/a-star-galaxy-generator) <br>
-It includes a fully playable web game that uses A* path-finding and a custom-made node connection algorithm. <br>
+It includes a fully playable web game that uses A* path-finding and a custom-made node connection algorithm.
 For an extensive write-up, please check the repo in the link above.
 
 ## Javascript
