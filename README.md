@@ -8,10 +8,10 @@
   - [Blender Batch Render](#blender-batch-render)
   - [Retrieving Data for Version Control](#retrieving-data-for-version-control)
 - [Bash](#bash)
+  - [Compress Images with MozJPEG](#compress-images-with-mozjpeg)
   - [Upgrade with Gotify Notification on Alpine](#upgrade-with-gotify-notification-on-alpine)
   - [Upgrade with Gotify Notification on Debian](#upgrade-with-gotify-notification-on-debian)
   - [Backup with Gotify Notification on Proxmox](#backup-with-gotify-notification-on-proxmox)
-  - [Compress Images with MozJPEG](#compress-images-with-mozjpeg)
 
 ## GDScript
 ### Galaxy Generator
@@ -53,6 +53,14 @@ file version number and a URL, which can come in two variants depending on the d
 Finally, it exports all the data to the text file in a CSV-friendly format.
 
 ## Bash
+### Compress Images with MozJPEG
+[Source code](bash/compress-images-mozjpeg.sh) <br>
+Automates the task of compressing images in a directory. The compression is lossy but
+barely noticeable thanks to the MozJPEG that is a superset of libjpeg-turbo.
+The user can pass arguments for source and output file extension, as well as output quality.
+The progress of the script is echoed in the console, and at the end, information is shown
+on how many images were successfully compressed.
+
 ### Upgrade with Gotify Notification on Alpine
 [Source code](bash/autoupdate.conf) <br>
 Send a Gotify notification after a successful package upgrade on the Alpine Linux distribution.
@@ -70,11 +78,3 @@ Using Cronjob to automate running the script is highly recommended.
 Backup specified files at the /etc path, which should include all important config files.
 The message from the backup is checked, and if an error is found, the notification recieves high priority.
 All of the credentials are safely stored in an .env file, and the backup itself is encrypted.
-
-### Compress Images with MozJPEG
-[Source code](bash/compress-images-mozjpeg.sh) <br>
-Automates the task of compressing images in a directory. The compression is lossy but
-barely noticeable thanks to the MozJPEG that is a superset of libjpeg-turbo.
-The user can pass arguments for source and output file extension, as well as output quality.
-The progress of the script is echoed in the console, and at the end, information is shown
-on how many images were successfully compressed.
