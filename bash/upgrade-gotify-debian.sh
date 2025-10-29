@@ -9,8 +9,8 @@
 
 unattended-upgrade -d
 
-today=$(date "+%Y-%m-%d-%H")
-message=$(cat /var/log/unattended-upgrades/unattended-upgrades.log | grep $today | grep " Packages that ")
+today=$(date "+%Y-%m-%d %H")
+message=$(cat /var/log/unattended-upgrades/unattended-upgrades.log | grep "${today}" | grep " Packages that ")
 if [ -z "$message" ]; then
     exit 0
 fi
