@@ -15,9 +15,10 @@ if [ -z "$message" ]; then
     exit 0
 fi
 
-# Wrap the message in a codeblock for better markdown formatting
+# Only include package names in the description
+message=$(echo $message | sed 's/.*upgraded://') 
 message='```\n'"${message}"'\n```'
 title="Upgrade (<guest-name>)"
-priority=2
+priority=5
 
 gotify-cli push -p "$priority" -t "$title" --contentType "text/markdown" "$message"
