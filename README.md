@@ -1,8 +1,6 @@
 # Resume
 - [GDScript](#gdscript)
   - [Galaxy Generator](#galaxy-generator)
-- [Javascript](#javascript)
-  - [Minecraft Modification](#minecraft-modification)
 - [Python](#python)
   - [My Blender Utils](#my-blender-utils)
   - [Blender Batch Render](#blender-batch-render)
@@ -12,25 +10,14 @@
   - [Upgrade with Gotify Notification on Alpine](#upgrade-with-gotify-notification-on-alpine)
   - [Upgrade with Gotify Notification on Debian](#upgrade-with-gotify-notification-on-debian)
   - [Backup with Gotify Notification on Proxmox](#backup-with-gotify-notification-on-proxmox)
+- [Javascript](#javascript)
+  - [Minecraft Modification](#minecraft-modification)
 
 ## GDScript
 ### Galaxy Generator
 [Dedicated repo link](https://github.com/SammySame/a-star-galaxy-generator) <br>
 It includes a fully playable web game that uses A* path-finding and a custom-made node connection algorithm.
 For an extensive write-up, please check the repo in the link above.
-
-## Javascript
-### Minecraft Modification
-[Source code](javascript/dimension-stacking.js) | 
-[Example config](javascript/dimension-stacking-config.json) <br>
-Minecraft is a 3D sandbox game with a huge modding community.
-Thanks to the [KubeJS](https://www.curseforge.com/minecraft/mc-mods/kubejs) 
-I utilized JavaScript to make changes to various base game mechanics.
-In this instance, I created a system for moving between in-game
-dimensions. Because the ability to teleport a player who is riding an entity
-is non-existent in the base game, I have created a completely custom solution.
-All of it is accompanied by a custom config file that can be used to create
-many dimension teleporting rules. It can even handle modded dimensions.
 
 ## Python
 ### My Blender Utils
@@ -78,3 +65,16 @@ Using Cronjob to automate running the script is highly recommended.
 Backup specified files at the /etc path, which should include all important config files.
 The message from the backup is checked, and if an error is found, the notification recieves high priority.
 All of the credentials are safely stored in an .env file, and the backup itself is encrypted.
+
+## Javascript
+### Minecraft Modification
+[Source code](javascript/dimension-stacking.js) | 
+[Example config](javascript/dimension-stacking-config.json) <br>
+Minecraft is a 3D sandbox game with a huge modding community.
+Thanks to the [KubeJS](https://www.curseforge.com/minecraft/mc-mods/kubejs) 
+I utilized JavaScript to make changes to various base game mechanics.
+In this instance, I created a system for moving between in-game
+dimensions. Because the ability to teleport a player who is riding an entity
+is non-existent in the base game, I have created a completely custom solution.
+All of it is accompanied by a custom config file that can be used to create
+many dimension teleporting rules. It can even handle modded dimensions.
