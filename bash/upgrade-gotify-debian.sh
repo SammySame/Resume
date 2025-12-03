@@ -15,10 +15,9 @@ if [ -z "$message" ]; then
     exit 0
 fi
 
-# Only include package names in the description
-message=$(echo $message | sed 's/.*upgraded://') 
-message='```\n'"${message}"'\n```'
+message=$(echo $message | sed 's/.*upgraded://') # Only include package names in the description
+message=$(echo $message | tr ' ' ', ') # Format packages as a comma separated list
 title="Upgrade (<guest-name>)"
 priority=5
 
-gotify-cli push -p "$priority" -t "$title" --contentType "text/markdown" "$message"
+gotify-cli push -p "$priority" -t "$title" --contentType "text/plain" "$message"
